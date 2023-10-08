@@ -22,4 +22,7 @@ export _APP_WORKER_PER_CORE=${_APP_WORKER_PER_CORE:-'1'}
 
 env | grep _APP_ | grep -v PASS | sort
 
+# disable OPcache because Redis->pconnect doesn't work on Heroku (no idea why)
+rm -f /usr/local/etc/php/conf.d/docker-php-ext-opcache.ini
+
 exec "$@"
