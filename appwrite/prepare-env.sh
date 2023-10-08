@@ -13,7 +13,7 @@ fi
 if [ ! -z "$REDIS_URL" ]; then
   export _APP_REDIS_HOST=$(php -r 'echo parse_url(getenv("REDIS_URL"), PHP_URL_HOST);')
   export _APP_REDIS_PORT=$(php -r 'echo parse_url(getenv("REDIS_URL"), PHP_URL_PORT);')
-  export _APP_REDIS_USER=$(php -r 'echo parse_url(getenv("REDIS_URL"), PHP_URL_USER) ?: "default";')
+  export _APP_REDIS_USER=$(php -r 'echo parse_url(getenv("REDIS_URL"), PHP_URL_USER);')
   export _APP_REDIS_PASS=$(php -r 'echo parse_url(getenv("REDIS_URL"), PHP_URL_PASS);')
 fi
 

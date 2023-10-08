@@ -5,7 +5,7 @@
             "as": "MYSQL"
         },
         {
-            "plan": "upstash-redis:free",
+            "plan": "rediscloud:30",
             "as": "REDIS"
         }
     ],
