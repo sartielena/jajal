@@ -1,6 +1,10 @@
 {
     "addons": [
         {
+            "plan": "bucketeer:hobbyist",
+            "as": "S3"
+        },
+        {
             "plan": "jawsdb-maria:kitefin",
             "as": "MYSQL"
         },
