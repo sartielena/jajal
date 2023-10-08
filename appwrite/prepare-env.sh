@@ -2,6 +2,14 @@
 
 set -e
 
+if [ ! -z "$MAILGUN_DOMAIN" ]; then
+  export _APP_SMTP_HOST=$MAILGUN_SMTP_SERVER
+  export _APP_SMTP_PORT=$MAILGUN_SMTP_PORT
+  export _APP_SMTP_USERNAME=$MAILGUN_SMTP_LOGIN
+  export _APP_SMTP_PASSWORD=$MAILGUN_SMTP_PASSWORD
+  export _APP_SYSTEM_EMAIL_ADDRESS="appwrite@$MAILGUN_DOMAIN"
+fi
+
 if [ ! -z "$MYSQL_URL" ]; then
   export _APP_DB_HOST=$(php -r 'echo parse_url(getenv("MYSQL_URL"), PHP_URL_HOST);')
   export _APP_DB_PORT=$(php -r 'echo parse_url(getenv("MYSQL_URL"), PHP_URL_PORT);')

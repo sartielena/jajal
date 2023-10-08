@@ -3,3 +3,7 @@ build:
     web: appwrite.Dockerfile
 run:
   web: /heroku/prepare-env.sh php app/http.php -dopcache.preload=opcache.preload=/usr/src/code/app/preload.php
+  worker-mails:
+    command:
+      - /heroku/prepare-env.sh worker-mails
+    image: web

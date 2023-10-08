@@ -9,12 +9,18 @@
             "as": "MYSQL"
         },
         {
+            "plan": "mailgun:starter"
+        },
+        {
             "plan": "rediscloud:30",
             "as": "REDIS"
         }
     ],
     "formation": {
         "web": {
+            "quantity": 1
+        },
+        "worker-mails": {
             "quantity": 1
         }
     },
