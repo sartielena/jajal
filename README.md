@@ -2,7 +2,7 @@
 
 https://github.com/appwrite/appwrite/issues/461
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https://github.com/sartielena/jajal)
 
 
 # Add-ons
